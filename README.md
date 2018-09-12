@@ -1,10 +1,10 @@
-#Demo-mvc
+# Demo-mvc
 
 Native PHP MVC skeleton using Zurb Foundation.
 
 ### 🐾 Installing
 
-####Skeleton
+#### Skeleton
 For the moment , you can can clone this repository :
 ```
 $ git clone https://github.com/michaeldeloris/mvc-skeleton.git
@@ -18,7 +18,7 @@ And finaly generate the autoloading
 $ composer dump-autoload
 ```
 
-####Zurb Foundation
+#### Zurb Foundation
 
 Move to public and install node_modules.
 ```
