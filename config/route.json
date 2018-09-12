@@ -1,0 +1,22 @@
+{
+    "index": {
+        "method" : "get",
+        "path" : "/demo_mvc/public/",
+        "controller" : "AppController",
+        "action" : "show"
+    },
+
+    "deleteRole": {
+        "method" : "get",
+        "path" : "/demo_mvc/public/roles/delete/([\\d]{1,3})",
+        "controller" : "RolesController",
+        "action" : "deleteRole"
+    },
+
+    "showRoles": {
+        "method" : "get",
+        "path" : "/demo_mvc/public/roles",
+        "controller" : "RolesController",
+        "action" : "showRoles"
+    }
+}

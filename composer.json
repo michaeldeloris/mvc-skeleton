@@ -1,0 +1,9 @@
+{
+    "name": "florian/revision_exam",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
