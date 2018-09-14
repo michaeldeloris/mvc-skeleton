@@ -18,5 +18,12 @@
         "path" : "/demo_mvc/public/roles",
         "controller" : "RolesController",
         "action" : "showRoles"
+    },
+
+    "createRole": {
+        "method" : "post",
+        "path" : "/demo_mvc/public/roles/create",
+        "controller" : "RolesController",
+        "action" : "createRole"
     }
 }
