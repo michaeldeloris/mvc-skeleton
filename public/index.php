@@ -6,19 +6,19 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $content = file_get_contents(__DIR__ . '/../config/route.json');
 $routes = json_decode($content);
-$uri = $_SERVER['REQUEST_URI'];
+$uri = $_SERVER['REDIRECT_URL'];
 $method = strtolower($_SERVER['REQUEST_METHOD']);
 $prefix = "App\\Controller\\";
 $response = new Response();
 $match = [];
-var_dump($match);
 
 foreach ($routes as $route) {
-    $pattern = "/" . str_replace("/", "\/", $routes->deleteRole->path) . "$/";
+    $pattern = "/" . str_replace("/", "\/", $route->path) . "$/";
     if ($method === $route->method
         && preg_match($pattern, $uri, $match)) {
         $className = $prefix . $route->controller;
         $controller = new $className($response);
+        array_shift($match);
         $response = $controller->{$route->action}(...$match);
     }
 }
