@@ -5,6 +5,9 @@ namespace App\Model;
 
 class Role
 {
+    const NAME = "/^[a-z]{3,10}$/";
+    const VALUE = "/^[R][O][L][E][_][A-Z]{3,10}$/";
+
     private $id;
     private $name;
     private $value;
@@ -26,6 +29,4 @@ class Role
 
         return $this->value;
     }
-
-
 }
