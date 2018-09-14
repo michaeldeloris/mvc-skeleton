@@ -11,7 +11,10 @@ class PDOHandler
         $jsonContent = file_get_contents(__DIR__ . "/../../config/database.json");
         $database = json_decode($jsonContent);
 
-        if (!isset($database) && !isset($username) && !isset($password) && !isset($host)) {
+        if (!isset($database->username)
+            || !isset($database->password)
+            || !isset($database->database)
+            || !isset($database->host) ){
             throw new \RunTimeException("Database not good ");
         }
 
